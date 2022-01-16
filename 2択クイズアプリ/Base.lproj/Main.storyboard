@@ -1,24 +1,467 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mgU-Uq-Vs4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Aiharahudemojikaisho_free303.ttf">
+            <string>AiharaHudemojiKaisho</string>
+        </array>
+        <array key="NikkyouSans-mLKax.ttf">
+            <string>Nikkyou-Sans</string>
+        </array>
+        <array key="ackaisyo.ttf">
+            <string>ackaisyo</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="_択クイス_アフ_リ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hujisan" translatesAutoresizingMaskIntoConstraints="NO" id="PhF-h5-ZLl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqF-lY-9nk">
+                                <rect key="frame" x="260" y="380" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="uE9-TS-uZE"/>
+                                    <constraint firstAttribute="width" constant="80" id="w9y-MR-z1F"/>
+                                </constraints>
+                                <state key="normal" image="2235664"/>
+                                <connections>
+                                    <segue destination="ILy-nt-J5N" kind="show" id="Yfr-rN-Yge"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2択クイズ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vl-xM-6Lu">
+                                <rect key="frame" x="197" y="154" width="206" height="53"/>
+                                <fontDescription key="fontDescription" name="Nikkyou-Sans" family="Nikkyou Sans" pointSize="45"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rqF-lY-9nk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="120" id="arR-GG-qM9"/>
+                            <constraint firstItem="9Vl-xM-6Lu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-120" id="h8Q-UD-ymd"/>
+                            <constraint firstItem="rqF-lY-9nk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="knX-B6-Umu"/>
+                            <constraint firstItem="9Vl-xM-6Lu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ohM-W6-Aeb"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="EXi-0T-Rx1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1005.7971014492755" y="73.660714285714278"/>
+        </scene>
+        <!--Select View Controller-->
+        <scene sceneID="dMO-Tu-yhc">
+            <objects>
+                <viewController storyboardIdentifier="selectVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ILy-nt-J5N" customClass="SelectViewController" customModule="_択クイス_アフ_リ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O3d-qs-6Hl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hushimi" translatesAutoresizingMaskIntoConstraints="NO" id="A7O-fL-2Tz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="難易度を選べ。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqD-wI-dfK">
+                                <rect key="frame" x="160" y="127" width="280" height="47"/>
+                                <fontDescription key="fontDescription" name="AiharaHudemojiKaisho" family="AiharaHudemojiKaisho" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選んだ瞬間にスタート。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKW-bA-6Cx">
+                                <rect key="frame" x="160" y="510" width="280" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="INr-FB-6EO"/>
+                                    <constraint firstAttribute="height" constant="50" id="he1-Vq-w8A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AiharaHudemojiKaisho" family="AiharaHudemojiKaisho" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hg-ye-QO9">
+                                <rect key="frame" x="157" y="305" width="87" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KAw-KS-kAD"/>
+                                    <constraint firstAttribute="width" constant="87" id="SnX-Wk-ryG"/>
+                                </constraints>
+                                <state key="normal" image="1"/>
+                                <connections>
+                                    <action selector="syokyu:" destination="ILy-nt-J5N" eventType="touchUpInside" id="fZn-W4-XTr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJd-O8-yMl">
+                                <rect key="frame" x="259" y="307" width="83" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="LCf-fj-txi"/>
+                                    <constraint firstAttribute="height" constant="96" id="N1v-3K-SR9"/>
+                                </constraints>
+                                <state key="normal" image="2"/>
+                                <connections>
+                                    <action selector="tyukyu:" destination="ILy-nt-J5N" eventType="touchUpInside" id="bhi-8c-bYs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncN-33-aBH">
+                                <rect key="frame" x="357" y="305" width="87" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="LLi-eE-NmU"/>
+                                    <constraint firstAttribute="height" constant="100" id="WWd-WK-oWj"/>
+                                </constraints>
+                                <state key="normal" image="3"/>
+                                <connections>
+                                    <action selector="jyokyu:" destination="ILy-nt-J5N" eventType="touchUpInside" id="LWe-xK-bsv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全10問" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7t-6l-UNS">
+                                <rect key="frame" x="225" y="445" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8GZ-hY-FXc"/>
+                                    <constraint firstAttribute="width" constant="150" id="ZXF-yS-q1p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AiharaHudemojiKaisho" family="AiharaHudemojiKaisho" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vhe-BA-szh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qqD-wI-dfK" firstAttribute="centerX" secondItem="O3d-qs-6Hl" secondAttribute="centerX" id="5zx-97-LI7"/>
+                            <constraint firstItem="qqD-wI-dfK" firstAttribute="centerY" secondItem="O3d-qs-6Hl" secondAttribute="centerY" constant="-150" id="6Pa-ry-p7c"/>
+                            <constraint firstItem="k7t-6l-UNS" firstAttribute="centerY" secondItem="O3d-qs-6Hl" secondAttribute="centerY" constant="170" id="7xL-kf-NUG"/>
+                            <constraint firstItem="ncN-33-aBH" firstAttribute="centerX" secondItem="O3d-qs-6Hl" secondAttribute="centerX" constant="100" id="LJE-Nt-Zu5"/>
+                            <constraint firstItem="5Hg-ye-QO9" firstAttribute="centerY" secondItem="O3d-qs-6Hl" secondAttribute="centerY" constant="55" id="Rqb-cV-ex4"/>
+                            <constraint firstItem="jKW-bA-6Cx" firstAttribute="centerY" secondItem="O3d-qs-6Hl" secondAttribute="centerY" constant="235" id="SIQ-kf-8Ru"/>
+                            <constraint firstItem="MJd-O8-yMl" firstAttribute="centerX" secondItem="O3d-qs-6Hl" secondAttribute="centerX" id="fa8-Qu-wSa"/>
+                            <constraint firstItem="jKW-bA-6Cx" firstAttribute="centerX" secondItem="O3d-qs-6Hl" secondAttribute="centerX" id="fbI-aq-ogC"/>
+                            <constraint firstItem="5Hg-ye-QO9" firstAttribute="centerX" secondItem="O3d-qs-6Hl" secondAttribute="centerX" constant="-100" id="kVB-k2-2xc"/>
+                            <constraint firstItem="MJd-O8-yMl" firstAttribute="centerY" secondItem="O3d-qs-6Hl" secondAttribute="centerY" constant="55" id="uRT-BN-n58"/>
+                            <constraint firstItem="k7t-6l-UNS" firstAttribute="centerX" secondItem="O3d-qs-6Hl" secondAttribute="centerX" id="xWN-aY-7RH"/>
+                            <constraint firstItem="ncN-33-aBH" firstAttribute="centerY" secondItem="O3d-qs-6Hl" secondAttribute="centerY" constant="55" id="xdr-BT-GBx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zSd-7w-CXc"/>
+                    <connections>
+                        <segue destination="TD9-di-Cbb" kind="show" id="Ywi-gh-ZtY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rNC-Oh-39j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815.9420289855075" y="73.660714285714278"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="2rf-nC-uV5">
+            <objects>
+                <viewController storyboardIdentifier="quizVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TD9-di-Cbb" customClass="QuizViewController" customModule="_択クイス_アフ_リ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lwz-49-Fd6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wa" translatesAutoresizingMaskIntoConstraints="NO" id="AiC-4r-bq9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="batsu" translatesAutoresizingMaskIntoConstraints="NO" id="YLF-tM-nwN">
+                                <rect key="frame" x="170" y="170" width="260" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="PCd-zb-hdt"/>
+                                    <constraint firstAttribute="width" constant="260" id="eXw-Nz-JJO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maru" translatesAutoresizingMaskIntoConstraints="NO" id="EPV-BC-DqT">
+                                <rect key="frame" x="170" y="170" width="260" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="881-45-u1k"/>
+                                    <constraint firstAttribute="height" constant="260" id="EIC-2Q-Mej"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問題文が表示されます。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HH-8s-jqz">
+                                <rect key="frame" x="135" y="80" width="330" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="E9S-jZ-b4i"/>
+                                    <constraint firstAttribute="height" constant="200" id="e7B-Pl-G5e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ackaisyo" family="ackaisyo" pointSize="35"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYo-EM-rH4">
+                                <rect key="frame" x="305" y="293" width="160" height="215"/>
+                                <color key="backgroundColor" red="0.70333445880000001" green="0.90920743299999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="NCv-iP-Jok"/>
+                                    <constraint firstAttribute="height" constant="215" id="uww-zN-t3u"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="rightButton:" destination="TD9-di-Cbb" eventType="touchUpInside" id="ABH-VM-Jho"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDO-Ht-4Fs">
+                                <rect key="frame" x="135" y="293" width="160" height="215"/>
+                                <color key="backgroundColor" red="0.70333445880000001" green="0.90920743299999995" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="XR9-ko-7p1"/>
+                                    <constraint firstAttribute="height" constant="215" id="mhH-Tm-m5g"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="leftButton:" destination="TD9-di-Cbb" eventType="touchUpInside" id="ClJ-gW-QWN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="初級" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mq-IC-iRj">
+                                <rect key="frame" x="258" y="58" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="hOR-UK-j8h"/>
+                                    <constraint firstAttribute="width" constant="45" id="yN6-xY-S0C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLv-ZR-fYm">
+                                <rect key="frame" x="296" y="53" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Nwg-Vl-aJb"/>
+                                    <constraint firstAttribute="width" constant="55" id="TGc-5c-uTq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uPQ-Nb-Png"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nLv-ZR-fYm" firstAttribute="centerX" secondItem="lwz-49-Fd6" secondAttribute="centerX" constant="23" id="0cB-fl-aAp"/>
+                            <constraint firstItem="JDO-Ht-4Fs" firstAttribute="centerX" secondItem="lwz-49-Fd6" secondAttribute="centerX" constant="-85" id="0iE-fP-BjI"/>
+                            <constraint firstItem="9mq-IC-iRj" firstAttribute="centerY" secondItem="lwz-49-Fd6" secondAttribute="centerY" constant="-220" id="7mv-06-7MI"/>
+                            <constraint firstItem="JDO-Ht-4Fs" firstAttribute="centerY" secondItem="lwz-49-Fd6" secondAttribute="centerY" constant="100" id="9Av-Co-YDD"/>
+                            <constraint firstItem="bYo-EM-rH4" firstAttribute="centerX" secondItem="lwz-49-Fd6" secondAttribute="centerX" constant="85" id="HgX-5j-MJl"/>
+                            <constraint firstItem="YLF-tM-nwN" firstAttribute="centerY" secondItem="lwz-49-Fd6" secondAttribute="centerY" id="M5Z-Db-RmQ"/>
+                            <constraint firstItem="YLF-tM-nwN" firstAttribute="centerX" secondItem="lwz-49-Fd6" secondAttribute="centerX" id="Slu-SH-eAz"/>
+                            <constraint firstItem="nLv-ZR-fYm" firstAttribute="centerY" secondItem="lwz-49-Fd6" secondAttribute="centerY" constant="-220" id="bxa-1m-Nd6"/>
+                            <constraint firstItem="5HH-8s-jqz" firstAttribute="centerX" secondItem="lwz-49-Fd6" secondAttribute="centerX" id="mzc-lM-brf"/>
+                            <constraint firstItem="5HH-8s-jqz" firstAttribute="centerY" secondItem="lwz-49-Fd6" secondAttribute="centerY" constant="-120" id="nZZ-yN-uEo"/>
+                            <constraint firstItem="EPV-BC-DqT" firstAttribute="centerX" secondItem="lwz-49-Fd6" secondAttribute="centerX" id="oM1-Nv-Dl0"/>
+                            <constraint firstItem="bYo-EM-rH4" firstAttribute="centerY" secondItem="lwz-49-Fd6" secondAttribute="centerY" constant="100" id="pUH-cL-Imp"/>
+                            <constraint firstItem="EPV-BC-DqT" firstAttribute="centerY" secondItem="lwz-49-Fd6" secondAttribute="centerY" id="sUp-EJ-923"/>
+                            <constraint firstItem="9mq-IC-iRj" firstAttribute="centerX" secondItem="lwz-49-Fd6" secondAttribute="centerX" constant="-20" id="tc5-tr-jgN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7T7-Qk-TZL"/>
+                    <connections>
+                        <outlet property="NGImage" destination="YLF-tM-nwN" id="fZU-20-Hr9"/>
+                        <outlet property="answerImage" destination="EPV-BC-DqT" id="GpU-mv-8rn"/>
+                        <outlet property="kyuLabel" destination="9mq-IC-iRj" id="li4-FY-q25"/>
+                        <outlet property="leftImage" destination="JDO-Ht-4Fs" id="KfQ-2V-ZCR"/>
+                        <outlet property="quizCountLabel" destination="nLv-ZR-fYm" id="EMa-dx-VDD"/>
+                        <outlet property="quizLabel" destination="5HH-8s-jqz" id="c4z-gb-Xj3"/>
+                        <outlet property="rightImage" destination="bYo-EM-rH4" id="sR0-db-Sya"/>
+                        <segue destination="Gjl-Su-Cqf" kind="show" id="adX-4n-kVB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2y-G6-Iqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2621.739130434783" y="73.660714285714278"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="pqQ-pz-UZ0">
+            <objects>
+                <viewController storyboardIdentifier="resultVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gjl-Su-Cqf" customClass="ResultViewController" customModule="_択クイス_アフ_リ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wvp-WY-ehc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sakura" translatesAutoresizingMaskIntoConstraints="NO" id="Ujp-ea-KMQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果発表" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wO-jf-LwX">
+                                <rect key="frame" x="200" y="60" width="200" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="xzN-hX-NdB"/>
+                                    <constraint firstAttribute="width" constant="200" id="zt8-tp-B43"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AiharaHudemojiKaisho" family="AiharaHudemojiKaisho" pointSize="35"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNf-wD-xzZ">
+                                <rect key="frame" x="123" y="168" width="355" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="P69-3n-yPE"/>
+                                    <constraint firstAttribute="width" constant="355" id="U1V-JM-Adg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AiharaHudemojiKaisho" family="AiharaHudemojiKaisho" pointSize="35"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="○" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPL-Lx-rAi">
+                                <rect key="frame" x="290" y="330" width="90" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CZU-OS-3a2"/>
+                                    <constraint firstAttribute="width" constant="90" id="bSg-FR-c59"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y24-7n-Yef">
+                                <rect key="frame" x="308" y="538" width="160" height="35"/>
+                                <color key="backgroundColor" red="0.88441444650000001" green="0.97165733580000002" blue="0.58912661669999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Cji-H8-Y69"/>
+                                    <constraint firstAttribute="height" constant="35" id="K8f-f7-Ewj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AiharaHudemojiKaisho" family="AiharaHudemojiKaisho" pointSize="20"/>
+                                <state key="normal" title="ホームにもどる">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="modoru:" destination="Gjl-Su-Cqf" eventType="touchUpInside" id="RjC-l2-4rZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最高記録：○問正解" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESq-B1-SNe">
+                                <rect key="frame" x="125" y="393" width="350" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="Fgo-TI-bJE"/>
+                                    <constraint firstAttribute="height" constant="55" id="iAC-zT-aj3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AiharaHudemojiKaisho" family="AiharaHudemojiKaisho" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイム：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCI-i2-V7j">
+                                <rect key="frame" x="200" y="328" width="90" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="CIO-xD-jCo"/>
+                                    <constraint firstAttribute="height" constant="55" id="eXM-7x-cQM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AiharaHudemojiKaisho" family="AiharaHudemojiKaisho" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="最速タイム：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEQ-wy-vAv">
+                                <rect key="frame" x="165" y="458" width="140" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="6c1-pz-6F8"/>
+                                    <constraint firstAttribute="width" constant="140" id="nFD-dz-xUF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AiharaHudemojiKaisho" family="AiharaHudemojiKaisho" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="秒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8A-nz-rgw">
+                                <rect key="frame" x="381" y="328" width="75" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Ocs-i0-lQP"/>
+                                    <constraint firstAttribute="height" constant="55" id="XUf-wO-Whc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AiharaHudemojiKaisho" family="AiharaHudemojiKaisho" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="秒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP1-UN-NBq">
+                                <rect key="frame" x="403" y="458" width="75" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Ody-jY-QW9"/>
+                                    <constraint firstAttribute="width" constant="75" id="Xtm-Yj-YJd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AiharaHudemojiKaisho" family="AiharaHudemojiKaisho" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="○" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76t-rt-j6c">
+                                <rect key="frame" x="305" y="460" width="90" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="rPJ-3I-OHA"/>
+                                    <constraint firstAttribute="height" constant="50" id="wtt-Nk-my0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z7Y-YC-gkN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y24-7n-Yef" firstAttribute="centerY" secondItem="wvp-WY-ehc" secondAttribute="centerY" constant="255" id="Fc9-gE-aDB"/>
+                            <constraint firstItem="xEQ-wy-vAv" firstAttribute="centerY" secondItem="wvp-WY-ehc" secondAttribute="centerY" constant="185" id="Jon-yI-vEI"/>
+                            <constraint firstItem="hNf-wD-xzZ" firstAttribute="centerY" secondItem="wvp-WY-ehc" secondAttribute="centerY" constant="-55" id="K2x-SU-23h"/>
+                            <constraint firstItem="ESq-B1-SNe" firstAttribute="centerX" secondItem="wvp-WY-ehc" secondAttribute="centerX" id="Kec-qR-8o1"/>
+                            <constraint firstItem="oP1-UN-NBq" firstAttribute="centerX" secondItem="wvp-WY-ehc" secondAttribute="centerX" constant="140" id="Osh-dZ-hCz"/>
+                            <constraint firstItem="ZCI-i2-V7j" firstAttribute="centerX" secondItem="wvp-WY-ehc" secondAttribute="centerX" constant="-55" id="Pqz-Tw-rHx"/>
+                            <constraint firstItem="76t-rt-j6c" firstAttribute="centerY" secondItem="wvp-WY-ehc" secondAttribute="centerY" constant="185" id="PrS-EV-ePL"/>
+                            <constraint firstItem="ESq-B1-SNe" firstAttribute="centerY" secondItem="wvp-WY-ehc" secondAttribute="centerY" constant="120" id="RIQ-O1-lro"/>
+                            <constraint firstItem="Y24-7n-Yef" firstAttribute="centerX" secondItem="wvp-WY-ehc" secondAttribute="centerX" constant="88" id="TtR-p9-w7d"/>
+                            <constraint firstItem="ZPL-Lx-rAi" firstAttribute="centerX" secondItem="wvp-WY-ehc" secondAttribute="centerX" constant="35" id="UUg-Mm-bbn"/>
+                            <constraint firstItem="oP1-UN-NBq" firstAttribute="centerY" secondItem="wvp-WY-ehc" secondAttribute="centerY" constant="185" id="adL-2m-qoQ"/>
+                            <constraint firstItem="ZCI-i2-V7j" firstAttribute="centerY" secondItem="wvp-WY-ehc" secondAttribute="centerY" constant="55" id="cAI-le-IbN"/>
+                            <constraint firstItem="3wO-jf-LwX" firstAttribute="centerX" secondItem="wvp-WY-ehc" secondAttribute="centerX" id="cd8-RX-J9g"/>
+                            <constraint firstItem="H8A-nz-rgw" firstAttribute="centerX" secondItem="wvp-WY-ehc" secondAttribute="centerX" constant="118" id="edL-Hp-cqR"/>
+                            <constraint firstItem="76t-rt-j6c" firstAttribute="centerX" secondItem="wvp-WY-ehc" secondAttribute="centerX" constant="50" id="h73-Yg-4v2"/>
+                            <constraint firstItem="xEQ-wy-vAv" firstAttribute="centerX" secondItem="wvp-WY-ehc" secondAttribute="centerX" constant="-65" id="iKP-yw-fO2"/>
+                            <constraint firstItem="ZPL-Lx-rAi" firstAttribute="centerY" secondItem="wvp-WY-ehc" secondAttribute="centerY" constant="55" id="jmU-8v-Kp4"/>
+                            <constraint firstItem="3wO-jf-LwX" firstAttribute="centerY" secondItem="wvp-WY-ehc" secondAttribute="centerY" constant="-200" id="lcj-GO-QE8"/>
+                            <constraint firstItem="H8A-nz-rgw" firstAttribute="centerY" secondItem="wvp-WY-ehc" secondAttribute="centerY" constant="55" id="mcz-vk-gUZ"/>
+                            <constraint firstItem="hNf-wD-xzZ" firstAttribute="centerX" secondItem="wvp-WY-ehc" secondAttribute="centerX" id="ymh-RW-4Nr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="d9g-OH-Ejl"/>
+                    <connections>
+                        <outlet property="bestScore" destination="ESq-B1-SNe" id="MHh-ZU-GA6"/>
+                        <outlet property="bestTime" destination="76t-rt-j6c" id="2T5-q0-CXH"/>
+                        <outlet property="pointLabel" destination="hNf-wD-xzZ" id="6Xo-G5-IGi"/>
+                        <outlet property="timeLabel" destination="ZPL-Lx-rAi" id="wGh-mu-ID7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pJ-ee-w7p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3444.9275362318845" y="73.660714285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yj3-IN-KhC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mgU-Uq-Vs4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2RV-z2-jb8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uYt-dU-qoi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1i-Hc-UJ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="73.660714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="364" height="441"/>
+        <image name="2" width="375" height="380"/>
+        <image name="2235664" width="791" height="791"/>
+        <image name="3" width="358" height="442"/>
+        <image name="batsu" width="640" height="360"/>
+        <image name="hujisan" width="315" height="389"/>
+        <image name="hushimi" width="1920" height="1280"/>
+        <image name="maru" width="640" height="360"/>
+        <image name="sakura" width="1920" height="1238"/>
+        <image name="wa" width="1920" height="1280"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

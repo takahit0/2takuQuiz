@@ -30,7 +30,7 @@
 		5102EA9C26F0911C000D77FF /* KouzanMouhituFontOTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KouzanMouhituFontOTF.otf; sourceTree = "<group>"; };
 		5190BFF226E1E31A00584E39 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		5190BFF426E2119700584E39 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
-		51A49FE826DE5465008A225F /* 2択クイズアプリ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2択クイズアプリ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51A49FE826DE5465008A225F /* 2takuQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2takuQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A49FEB26DE5465008A225F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51A49FED26DE5465008A225F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		51A49FEF26DE5465008A225F /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		51A49FE926DE5465008A225F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				51A49FE826DE5465008A225F /* 2択クイズアプリ.app */,
+				51A49FE826DE5465008A225F /* 2takuQuiz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,7 +89,8 @@
 				51D776C026DF6E2600382121 /* Aiharahudemojikaisho_free303.ttf */,
 				5102EA9C26F0911C000D77FF /* KouzanMouhituFontOTF.otf */,
 			);
-			path = 2takuQuiz;
+			name = 2takuQuiz;
+			path = "2択クイズアプリ";
 			sourceTree = "<group>";
 		};
 		51A49FFF26DE5502008A225F /* Model */ = {
@@ -116,9 +117,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		51A49FE726DE5465008A225F /* 2択クイズアプリ */ = {
+		51A49FE726DE5465008A225F /* 2takuQuiz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 51A49FFC26DE5467008A225F /* Build configuration list for PBXNativeTarget "2択クイズアプリ" */;
+			buildConfigurationList = 51A49FFC26DE5467008A225F /* Build configuration list for PBXNativeTarget "2takuQuiz" */;
 			buildPhases = (
 				51A49FE426DE5465008A225F /* Sources */,
 				51A49FE526DE5465008A225F /* Frameworks */,
@@ -128,9 +129,9 @@
 			);
 			dependencies = (
 			);
-			name = "2択クイズアプリ";
+			name = 2takuQuiz;
 			productName = "2択クイズアプリ";
-			productReference = 51A49FE826DE5465008A225F /* 2択クイズアプリ.app */;
+			productReference = 51A49FE826DE5465008A225F /* 2takuQuiz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -147,7 +148,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 51A49FE326DE5465008A225F /* Build configuration list for PBXProject "2択クイズ" */;
+			buildConfigurationList = 51A49FE326DE5465008A225F /* Build configuration list for PBXProject "2takuQuiz" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -160,7 +161,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				51A49FE726DE5465008A225F /* 2択クイズアプリ */,
+				51A49FE726DE5465008A225F /* 2takuQuiz */,
 			);
 		};
 /* End PBXProject section */
@@ -344,7 +345,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T74XZK2L33;
-				INFOPLIST_FILE = "2択クイズアプリ/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/2択クイズアプリ/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,7 +364,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T74XZK2L33;
-				INFOPLIST_FILE = "2択クイズアプリ/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/2択クイズアプリ/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +379,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		51A49FE326DE5465008A225F /* Build configuration list for PBXProject "2択クイズ" */ = {
+		51A49FE326DE5465008A225F /* Build configuration list for PBXProject "2takuQuiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				51A49FFA26DE5467008A225F /* Debug */,
@@ -387,7 +388,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		51A49FFC26DE5467008A225F /* Build configuration list for PBXNativeTarget "2択クイズアプリ" */ = {
+		51A49FFC26DE5467008A225F /* Build configuration list for PBXNativeTarget "2takuQuiz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				51A49FFD26DE5467008A225F /* Debug */,
